@@ -1,0 +1,111 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --version-gray-color: #838383;
+  --active-link-color: #5932ea;
+  --gray-links-text-color: #9197b3;
+  --gray-profile-text-color: #757575;
+  --active-green-text-color: #16c098;
+  --gray-table-text-color: #b5b7c0;
+  --black-table-text-color: #292d32;
+  --table-gray-border-color: #eeeeee;
+  --table-button-color: #f5f5f5;
+  --input-color: #f9fbff;
+  --pagination-button-gray-color: #f5f5f5;
+  --pagination-text-black-color: #404b52;
+  --status-bar-green-text: #008767;
+  --status-bar-green-border: #00b087;
+  --status-bar-green-background: #16c098;
+  --status-bar-green-background-light: #6bd8bf;
+  --status-bar-red-text: #df0404;
+  --status-bar-red-background: #ffc5c5;
+
+  --xxl-font: 26px;
+  --xl-font: 24px;
+  --l-font: 22px;
+  --m-font: 14px;
+  --s-font: 12px;
+  --xs-font: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+html {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: Poppins, sans-serif;
+  background-color: var(--table-gray-border-color);
+  color: var(--black);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "a c c c c c c c c c c c"
+    "a c c c c c c c c c c c";
+}
+
+.aside {
+  grid-area: a;
+}
+
+.content-section {
+  grid-area: c;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .table-section {
+    padding: 0 15px;
+  }
+
+  .table-section td,
+  .table-section th {
+    padding: 8px;
+    font-size: var(--s-font);
+  }
+
+  .table-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas:
+      "a a a a a a a a a a a a"
+      "c c c c c c c c c c c c";
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "c";
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "a"
+      "c";
+  }
+}

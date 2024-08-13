@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Vlad Antonov" />
+    <title>Test page for Glivera team</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/aside.css" />
+    <link rel="stylesheet" href="./styles/content.css" />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <a href="#" title="site logo" class="site-link">
+          <img src="./public/aside/site-logo.svg" alt="site image" />
+          <h1>Dashboard</h1>
+          <p>v.01</p>
+        </a>
+        <nav class="navigation-section">
+          <ul>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to dashboard')"
+                class="navigation-link"
+                title="dashboard page link"
+              >
+                <img
+                  src="./public/aside/dashboard-logo.svg"
+                  alt="Dashboard logo"
+                />
+                <p>Dashboard</p>
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to product page')"
+                class="navigation-link"
+                title="product page link"
+              >
+                <img src="./public/aside/product-logo.svg" alt="Product logo" />
+                <p>Product</p>
+                <img
+                  src="./public/aside/arrow-right.svg"
+                  alt=""
+                  class="arrow-right-image"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to customers page')"
+                class="navigation-link active"
+                title="customers page link"
+              >
+                <img
+                  src="./public/aside/customers-logo.svg"
+                  alt="Customers logo"
+                />
+                <p>Customers</p>
+                <img
+                  src="./public/aside/arrow-right.svg"
+                  alt=""
+                  class="arrow-right-image"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to income page')"
+                class="navigation-link"
+                title="income page link"
+              >
+                <img src="./public/aside/income-logo.svg" alt="Income logo" />
+                <p>Income</p>
+                <img
+                  src="./public/aside/arrow-right.svg"
+                  alt=""
+                  class="arrow-right-image"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to promote page')"
+                class="navigation-link"
+                title="promote page link"
+              >
+                <img src="./public/aside/promote-logo.svg" alt="Promote logo" />
+                <p>Promote</p>
+                <img
+                  src="./public/aside/arrow-right.svg"
+                  alt=""
+                  class="arrow-right-image"
+                />
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                onclick="alert('usually it links you to help page')"
+                class="navigation-link"
+                title="help page link"
+              >
+                <img src="./public/aside/help-logo.svg" alt="Help logo" />
+                <p>Help</p>
+                <img
+                  src="./public/aside/arrow-right.svg"
+                  alt=""
+                  class="arrow-right-image"
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <section class="user-section">
+          <img src="./public/aside/user-image.svg" alt="user-image" />
+          <div>
+            <p>Evano</p>
+            <p>Project Manager</p>
+          </div>
+        </section>
+      </aside>
+      <main class="content-section">
+        <h2 class="main-title">Hello Evano 👋🏼,</h2>
+        <section class="table-header">
+          <div>
+            <h2 class="table-title">All Customers</h2>
+            <p class="table-paragraph">Active Members</p>
+          </div>
+          <div class="table-search-section">
+            <img
+              src="./public/main/search-icon.svg"
+              alt="seach-image"
+              class="search-image"
+            />
+            <input
+              type="text"
+              placeholder="Search"
+              class="search-input"
+              id="search-input"
+              title="search-customer"
+            />
+          </div>
+        </section>
+        <table class="table-section">
+          <thead>
+            <tr>
+              <td>Customer Name</td>
+              <td>Company</td>
+              <td>Phone Number</td>
+              <td>Email</td>
+              <td>Country</td>
+              <td>Status</td>
+            </tr>
+          </thead>
+          <tbody id="customers-table-body"></tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">
+                <div id="pagination" class="pagination">
+                  <div id="pagination-info" class="pagination-info"></div>
+                  <div id="pagination-bar" class="pagination-bar">
+                    <button id="prev-page"><</button>
+                    <span id="page-numbers"></span>
+                    <button id="next-page">></button>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </main>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
